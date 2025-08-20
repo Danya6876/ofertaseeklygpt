@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оферта — Политика конфиденциальности и возврата | SeeklyGPT_bot</title>
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #11162a;
+      --text: #e9ecf1;
+      --muted: #aeb6c7;
+      --brand: #7aa2ff;
+      --brand-2: #5ae0b5;
+      --stroke: #263045;
+      --accent: #1a2340;
+      --ok: #2ecc71;
+      --warn: #f1c40f;
+      --danger: #e74c3c;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --shadow-soft: 0 4px 20px rgba(0,0,0,.25);
+      --maxw: 980px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg: #f7f8fb;
+        --card: #ffffff;
+        --text: #0e1320;
+        --muted: #55607a;
+        --brand: #2f62ff;
+        --brand-2: #0f9d74;
+        --stroke: #e6e8f0;
+        --accent: #eef2ff;
+        --shadow: 0 12px 34px rgba(16,24,40,.12);
+        --shadow-soft: 0 6px 20px rgba(16,24,40,.08);
+      }
+    }
+
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 10% -10%, var(--accent), transparent 50%),
+                  radial-gradient(1200px 800px at 100% 10%, rgba(122,162,255,.12), transparent 40%),
+                  var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap { max-width: var(--maxw); margin: 40px auto; padding: 0 20px 120px; }
+
+    .hero {
+      position: relative;
+      border: 1px solid var(--stroke);
+      background: linear-gradient(180deg, rgba(122,162,255,.10), transparent 40%), var(--card);
+      padding: 32px;
+      border-radius: calc(var(--radius) + 8px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .badge { display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; border:1px solid var(--stroke); background: rgba(122,162,255,.10); font-weight:600; letter-spacing:.3px; }
+    .badge svg { width:16px; height:16px; }
+
+    h1 { font-size: clamp(28px, 3.2vw, 40px); line-height:1.15; margin: 12px 0 10px; }
+    .subtitle { color: var(--muted); margin: 0 0 6px; }
+    .hero .links { display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px; }
+    .btn {
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 14px; border-radius: 12px; border:1px solid var(--stroke);
+      text-decoration:none; color:var(--text); background: var(--card);
+      box-shadow: var(--shadow-soft);
+    }
+    .btn.primary { background: linear-gradient(180deg, var(--brand), var(--brand-2)); color: #fff; border: none; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 20px rgba(0,0,0,.12); }
+
+    .grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 24px; }
+    @media (min-width: 960px){ .grid { grid-template-columns: 280px 1fr; } }
+
+    .toc {
+      position: sticky; top: 24px; align-self: start;
+      border:1px solid var(--stroke); background: var(--card); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-soft);
+    }
+    .toc h3 { margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); }
+    .toc a { color: var(--text); opacity:.9; text-decoration: none; display:block; padding:6px 2px; border-radius: 8px; }
+    .toc a:hover { background: rgba(122,162,255,.12); }
+
+    .card { border:1px solid var(--stroke); background: var(--card); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-soft); }
+
+    h2 { font-size: clamp(22px, 2.2vw, 28px); margin: 14px 0; }
+    h3 { font-size: 18px; margin: 14px 0 8px; }
+
+    p { margin: 8px 0; }
+    ol { padding-left: 20px; }
+    li { margin: 6px 0; }
+
+    a { color: var(--brand); }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+    .note { font-size: 14px; color: var(--muted); }
+    .footer { margin-top: 32px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+
+    .status {
+      display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius: 10px; border: 1px solid var(--stroke); background: rgba(90,224,181,.10);
+    }
+
+    .print {
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius: 10px; border:1px solid var(--stroke); background: var(--card); cursor:pointer;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; }
+      .hero, .toc, .footer { box-shadow: none; }
+      .btn, .print, .badge { display: none !important; }
+      .wrap { padding-bottom: 0; }
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero" role="banner">
+      <div class="badge" aria-label="Документ оферты">
+        <!-- Shield icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l7 4v6c0 5-3.4 9.4-7 10-3.6-.6-7-5-7-10V6l7-4z"/></svg>
+        Оферта / Политика конфиденциальности и возврата
+      </div>
+      <h1>Оферта для Telegram-бота <span class="mono">@SeeklyGPT_bot</span></h1>
+      <p class="subtitle">Последнее обновление: <time id="lastUpdated" datetime="2025-08-20">20 августа 2025</time></p>
+      <div class="links" role="navigation" aria-label="Быстрые ссылки">
+        <a class="btn primary" href="https://t.me/SeeklyGPT_bot" target="_blank" rel="noopener">Открыть бота</a>
+        <button class="btn print" onclick="window.print()" type="button" aria-label="Распечатать/сохранить в PDF">
+          <!-- Printer icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6 7V3h12v4H6zm12 2H6a4 4 0 00-4 4v5h4v3h12v-3h4v-5a4 4 0 00-4-4zm-2 10H8v-5h8v5z"/></svg>
+          Печать / PDF
+        </button>
+        <a class="btn" href="#return-policy">Перейти к возврату</a>
+        <a class="btn" href="#privacy">Перейти к политике</a>
+      </div>
+    </header>
+
+    <main class="grid" role="main">
+      <aside class="toc" aria-label="Оглавление">
+        <h3>Оглавление</h3>
+        <nav>
+          <a href="#return-policy">Политика возврата</a>
+          <a href="#privacy">1. Общие положения</a>
+          <a href="#terms">2. Термины и определения</a>
+          <a href="#purposes">3. Цели обработки</a>
+          <a href="#legal">4. Правовые основания</a>
+          <a href="#categories">5. Категории и состав данных</a>
+          <a href="#retention">6. Сроки хранения</a>
+          <a href="#processing">7. Сведения об обработке</a>
+          <a href="#security">8. Безопасность данных</a>
+          <a href="#rights">9. Права субъектов</a>
+          <a href="#final">10. Заключительные положения</a>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <article id="return-policy" class="card" aria-labelledby="returnPolicyHeading">
+          <h2 id="returnPolicyHeading">Политика возврата</h2>
+          <ol>
+            <li>Вы соглашаетесь с тем, что после успешного совершения платежа вы не будете предъявлять споры или претензии платежным агрегаторам.</li>
+            <li>Возвраты за заказы производятся только на те реквизиты, с которых поступала оплата (карта банка или электронный кошелёк).</li>
+            <li>Оформить заявку на возврат можно в течение 48 часов с момента заказа/пополнения баланса.</li>
+            <li>При проведении подозрительных или мошеннических действий ваша подписка может быть приостановлена.</li>
+            <li>Возврат средств возможен по запросу пользователя в службу поддержки бота.</li>
+            <li>Возврат осуществляется на выбранную пользователем платёжную систему.</li>
+            <li>Мы не несём ответственности за комиссию платёжных агрегаторов, но уведомляем пользователя о возможных комиссиях при выводе средств с аккаунта.</li>
+            <li>Если вы ошиблись с выбором или у вас не получается настроить — всегда можно поменять товар.</li>
+          </ol>
+          <p class="note">Поддержка: <a href="mailto:yourmail@example.com">neznaykaan@yandex.ru</a> • Бот: <a href="https://t.me/SeeklyGPT_bot" target="_blank" rel="noopener">@SeeklyGPT_bot</a></p>
+        </article>
+
+        <article id="privacy" class="card" aria-labelledby="privacyHeading">
+          <h2 id="privacyHeading">1. Общие положения</h2>
+          <p>1.1 Настоящая политика в области обработки персональных данных (далее — «Политика») направлена на защиту прав и свобод физических лиц, персональные данные которых обрабатывает Администрация сервиса (далее — «Оператор»).</p>
+          <p>1.2 Политика разработана в соответствии с п. 2 ч. 1 ст. 18.1 Федерального закона от 27.07.2006 № 152‑ФЗ «О персональных данных».</p>
+          <p>1.3 Политика является общедоступным документом и размещена в Telegram‑боте Оператора — <a href="https://t.me/SeeklyGPT_bot" target="_blank" rel="noopener">https://t.me/SeeklyGPT_bot</a>.</p>
+          <p>1.4 Контактные данные Оператора:</p>
+          <ul>
+            <li>Электронная почта: <strong>neznaykaan@yandex.ru</strong> </li>
+            <li>Адрес интернет‑сайта: <strong>https://t.me/SeeklyGPT_bot</strong> </li>
+          </ul>
+          <p>1.5 Настоящая Политика действует в отношении всей информации, размещённой в Telegram‑боте <a href="https://t.me/SeeklyGPT_bot" target="_blank" rel="noopener">@SeeklyGPT_bot</a>, а также в отношении персональных данных работников Оператора, его контрагентов и иных субъектов персональных данных, информация о которых обрабатывается Оператором.</p>
+          <p>1.6 Любое использование бота означает безоговорочное согласие Пользователя с настоящей Политикой и указанными в ней условиями обработки персональных данных.</p>
+          <p>1.7 В случае несогласия с этими условиями Пользователь должен воздержаться от использования бота и не предоставлять Оператору свои персональные данные.</p>
+        </article>
+
+        <article id="terms" class="card" aria-labelledby="termsHeading">
+          <h2 id="termsHeading">2. Используемые термины и определения</h2>
+          <p>2.1 <strong>Персональные данные</strong> — любая информация, относящаяся прямо или косвенно к определённому или определяемому физическому лицу (субъекту персональных данных).</p>
+          <p>2.2 <strong>Оператор</strong> — лицо, самостоятельно или совместно с другими лицами организующее и (или) осуществляющее обработку персональных данных и определяющее цели обработки, состав персональных данных и действия (операции) с ними.</p>
+          <p>2.3 <strong>Обработка персональных данных</strong> — любое действие (операция) или их совокупность с использованием средств автоматизации или без таковых: сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение.</p>
+          <p>2.4 <strong>Предоставление персональных данных</strong> — действия, направленные на раскрытие персональных данных определённому лицу или определённому кругу лиц.</p>
+          <p>2.5 <strong>Уничтожение персональных данных</strong> — действия, в результате которых становится невозможным восстановить содержание персональных данных и (или) уничтожаются материальные носители персональных данных.</p>
+          <p>2.6 <strong>Блокирование персональных данных</strong> — временное прекращение обработки персональных данных (кроме случаев, когда обработка необходима для их уточнения).</p>
+          <p>2.7 <strong>Пользователь</strong> — любое физическое лицо, использующее бот и вступающее в отношения с Оператором. Пользователь является субъектом персональных данных.</p>
+        </article>
+
+        <article id="purposes" class="card" aria-labelledby="purposesHeading">
+          <h2 id="purposesHeading">3. Цели обработки персональных данных</h2>
+          <ol>
+            <li>Исполнение договора, стороной которого либо выгодоприобретателем или поручителем является субъект персональных данных.</li>
+            <li>Заключение договора по инициативе субъекта персональных данных либо договора, по которому субъект является выгодоприобретателем или поручителем.</li>
+            <li>Достижение целей, предусмотренных законодательством, а также выполнение возложенных на Оператора функций, полномочий и обязанностей.</li>
+          </ol>
+        </article>
+
+        <article id="legal" class="card" aria-labelledby="legalHeading">
+          <h2 id="legalHeading">4. Правовое основание обработки персональных данных</h2>
+          <ol>
+            <li>Законодательство Российской Федерации в области персональных данных, включая 152‑ФЗ «О персональных данных».</li>
+            <li>Согласие на обработку персональных данных, предоставляемое Пользователем путём акцепта настоящей Политики или в письменной форме при заключении договоров.</li>
+            <li>Настоящая Политика.</li>
+            <li>Пользовательское соглашение сервиса.</li>
+          </ol>
+        </article>
+
+        <article id="categories" class="card" aria-labelledby="categoriesHeading">
+          <h2 id="categoriesHeading">5. Категории субъектов и состав персональных данных</h2>
+          <ol>
+            <li>Физические лица в трудовых и гражданско‑правовых отношениях с Оператором.</li>
+            <li>Физические лица в отношениях с контрагентами Оператора.</li>
+            <li>Субъекты персональных данных, приобретающие товары или получающие услуги через бот <a href="https://t.me/SeeklyGPT_bot" target="_blank" rel="noopener">@SeeklyGPT_bot</a>.</li>
+          </ol>
+          <p>Персональные данные обрабатываются в рамках правоотношений, урегулированных действующим законодательством РФ.</p>
+          <p>Согласие субъекта предоставляется в письменной форме или посредством конклюдентных действий в боте.</p>
+          <p><strong>Платежные данные.</strong> При оплате (Mastercard, Visa и др.) Оператор использует сервис‑агрегатор. Оператор <u>не</u> собирает, <u>не</u> обрабатывает и <u>не</u> хранит реквизиты счетов или данные банковских карт в собственных системах.</p>
+          <p>Состав обрабатываемых данных может включать: ФИО; электронную почту; иную информацию, указанную субъектом; технические данные, автоматически передаваемые при использовании бота (IP‑адрес, cookie, сведения о клиентском ПО, времени доступа, запрашиваемых действиях и пр.).</p>
+        </article>
+
+        <article id="retention" class="card" aria-labelledby="retentionHeading">
+          <h2 id="retentionHeading">6. Сроки обработки и хранения персональных данных</h2>
+          <p>Оператор обрабатывает и хранит персональные данные до достижения целей обработки или до утраты необходимости в их достижении.</p>
+        </article>
+
+        <article id="processing" class="card" aria-labelledby="processingHeading">
+          <h2 id="processingHeading">7. Сведения об обработке персональных данных</h2>
+          <ol>
+            <li>Обработка осуществляется на законной и справедливой основе для выполнения функций, полномочий и обязанностей Оператора и защиты его прав и законных интересов.</li>
+            <li>Персональные данные получаются непосредственно у субъектов персональных данных.</li>
+            <li>Обработка ведётся автоматизированными и неавтоматизированными способами.</li>
+            <li>Действия включают: сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение.</li>
+            <li>Базы данных, содержащие персональные данные граждан РФ, расположены на территории Российской Федерации.</li>
+          </ol>
+        </article>
+
+        <article id="security" class="card" aria-labelledby="securityHeading">
+          <h2 id="securityHeading">8. Сведения об обеспечении безопасности персональных данных</h2>
+          <ol>
+            <li>Назначается ответственное лицо за организацию обработки персональных данных.</li>
+            <li>Применяется комплекс правовых, организационных и технических мер по обеспечению безопасности персональных данных, в том числе:
+              <ol>
+                <li>Обеспечение публичного доступа к Политике.</li>
+                <li>Разработка локальных нормативных актов во исполнение Политики.</li>
+                <li>Ознакомление работников с законодательством о персональных данных и локальными актами.</li>
+                <li>Допуск работников к персональным данным только для выполнения трудовых обязанностей.</li>
+                <li>Установление правил доступа и учёт всех действий с персональными данными.</li>
+                <li>Оценка возможного вреда и соотнесение его с принимаемыми мерами защиты.</li>
+                <li>Определение угроз безопасности персональных данных.</li>
+                <li>Применение необходимых организационных и технических мер защиты.</li>
+                <li>Обнаружение фактов несанкционированного доступа и реагирование, включая восстановление данных.</li>
+                <li>Оценка эффективности мер защиты до ввода ИСПДн в эксплуатацию.</li>
+                <li>Внутренний контроль соблюдения требований законодательства и локальных актов.</li>
+              </ol>
+            </li>
+          </ol>
+        </article>
+
+        <article id="rights" class="card" aria-labelledby="rightsHeading">
+          <h2 id="rightsHeading">9. Права субъектов персональных данных</h2>
+          <ol>
+            <li>Получение персональных данных, относящихся к субъекту, и информации об их обработке.</li>
+            <li>Уточнение, блокирование или уничтожение персональных данных, если они неполные, устаревшие, неточные, незаконно полученные или не нужны для заявленной цели.</li>
+            <li>Отзыв согласия на обработку персональных данных.</li>
+            <li>Защита прав и законных интересов, в том числе возмещение убытков и компенсация морального вреда в судебном порядке.</li>
+            <li>Обжалование действий (бездействия) Оператора в уполномоченный орган или в судебном порядке.</li>
+          </ol>
+          <p>Запросы направляются на адрес электронной почты, указанный в разделе 1.4: <a href="mailto:yourmail@example.com">neznaykaan@yandex.ru</a>.</p>
+        </article>
+
+        <article id="final" class="card" aria-labelledby="finalHeading">
+          <h2 id="finalHeading">10. Заключительные положения</h2>
+          <ol>
+            <li>Оператор вправе вносить изменения в настоящую Политику без согласия Пользователя.</li>
+            <li>Новая редакция Политики вступает в силу с момента её публикации в боте.</li>
+            <li>Вопросы по Политике направляйте на <a href="mailto:yourmail@example.com">neznaykaan@yandex.ru</a>.</li>
+            <li>Действующая Политика размещена в Telegram‑боте: <a href="https://t.me/SeeklyGPT_bot" target="_blank" rel="noopener">https://t.me/SeeklyGPT_bot</a>.</li>
+            <li>Неотъемлемой частью настоящей Политики является Согласие на обработку персональных данных.</li>
+            <li>Политика действует совместно с Пользовательским соглашением.</li>
+            <li>Нарушение правил может грозить блокировкой пользователя без восстановления. Основная причина — передача конфигов/доступа третьим лицам. Использовать бот можно на одном устройстве.</li>
+          </ol>
+          <div class="footer">
+            <span class="status" title="Оферта актуальна на дату обновления">Статус: актуально</span>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Если нужно — обновите дату автоматически при генерации страницы
+    // document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('ru-RU');
+  </script>
+</body>
+</html>
